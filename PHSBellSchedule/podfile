@@ -1,0 +1,3 @@
+target "PHSBellSchedule"
+use_frameworks!
+pod 'BTNavigationDropdownMenu', :git => 'https://github.com/PhamBaTho/BTNavigationDropdownMenu.git', :branch => 'swift-3.0'
