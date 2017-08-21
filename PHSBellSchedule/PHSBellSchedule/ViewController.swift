@@ -46,10 +46,15 @@ class ViewController: UIViewController {
             print("yes")
         }
         
-        
-        
-
+        menu.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            print("Did select item at index: \(indexPath)")
+            if(indexPath == 0){
+                
+            }
+        }
     }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
