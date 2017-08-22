@@ -14,8 +14,7 @@ class ViewController: UIViewController {
     
     let date = Date()
     let formatter = DateFormatter()
-    
-    let test = ["08/21/2017"]
+    let test = ["08/22/2017"]
     let pepAsm1 = ["08/18/2017", "12/08/2017", "04/06/2018"]
     let pepAsm2 = ["09/15/2017"]
     let kwDay = ["09/28/2017", "11/02/2017", "01/25/2018", "03/08/2018", "04/19/2018"]
@@ -33,7 +32,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         menu = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Schedule", items: items as [AnyObject])
         menu.menuTitleColor = UIColor.blue
-        menu.backgroundColor = UIColor.cyan
+        menu.backgroundColor = UIColor.gray
         self.navigationItem.titleView = menu
 
 
@@ -43,10 +42,59 @@ class ViewController: UIViewController {
         let currentDate = formatter.string(from: date)
         print(currentDate)
         
-        if test.contains("\(currentDate)")
+        self.imageView.image = UIImage(named: "regular")
+        print("regular")
+        
+        if pepAsm1.contains("\(currentDate)")
         {
-            print("yes")
+            self.imageView.image = UIImage(named: "pepOne")
+            print("pepAsm1")
         }
+        if pepAsm2.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "pepTwo")
+            print("pepAsm2")
+        }
+        if kwDay.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "knightsWay")
+            print("kwDay")
+        }
+        if earlyDis.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "early")
+            print("earlyDis")
+        }
+        if specialAsm.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "special")
+            print("specialAsm")
+        }
+        if lockerCU.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "locker")
+            print("lockerCU")
+        }
+        if final1.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "finalsOne")
+            print("final1")
+        }
+        if final2.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "finalstwo")
+            print("final2")
+        }
+        if final3.contains("\(currentDate)")
+        {
+            self.imageView.image = UIImage(named: "finalsThree")
+            print("final3")
+        }
+
+        
+
+
+        
         
         menu.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
