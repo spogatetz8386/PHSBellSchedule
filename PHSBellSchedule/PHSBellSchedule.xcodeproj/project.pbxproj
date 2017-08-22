@@ -223,6 +223,7 @@
 				TargetAttributes = {
 					21C8570B1F44926A00D8060F = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = JV99S7T257;
 						ProvisioningStyle = Automatic;
 					};
 					21C857221F44926B00D8060F = {
@@ -300,7 +301,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DDBF6E21B326D084ED60F6BC /* [CP] Embed Pods Frameworks */ = {
@@ -500,7 +501,9 @@
 			baseConfigurationReference = 1E199D099BC436212382E4D4 /* Pods-PHSBellSchedule.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JV99S7T257;
 				INFOPLIST_FILE = PHSBellSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-61.PHSBellSchedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -513,7 +516,9 @@
 			baseConfigurationReference = A20BC6433437CB578600E199 /* Pods-PHSBellSchedule.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = JV99S7T257;
 				INFOPLIST_FILE = PHSBellSchedule/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-61.PHSBellSchedule";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -594,6 +599,7 @@
 				21C857391F44926B00D8060F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C8573A1F44926B00D8060F /* Build configuration list for PBXNativeTarget "PHSBellScheduleTests" */ = {
 			isa = XCConfigurationList;
@@ -602,6 +608,7 @@
 				21C8573C1F44926B00D8060F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21C8573D1F44926B00D8060F /* Build configuration list for PBXNativeTarget "PHSBellScheduleUITests" */ = {
 			isa = XCConfigurationList;
@@ -610,6 +617,7 @@
 				21C8573F1F44926B00D8060F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         let items = ["Regular", "PEP1", "PEP2", "Locker Cleanup", "Finals Day 1", "Finals Day 2", "Finals Day 3", "Knights Way", "Early Dismissal", "Special Assembly"]
+        let schedules = ["regular.png", "pepOne.png", "pepTwo.png", "locker.png", "finalsOne.png", "finalsTwo.png", "finalsThree.png", "knightsWay.png", "early.png", "special.png"]
         super.viewDidLoad()
         menu = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Schedule", items: items as [AnyObject])
         menu.menuTitleColor = UIColor.blue
@@ -49,36 +50,7 @@ class ViewController: UIViewController {
         
         menu.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
             print("Did select item at index: \(indexPath)")
-            if(indexPath == 0){
-                self?.imageView.image = UIImage(named: "regular.png")
-            }
-            else if(indexPath == 1){
-                self?.imageView.image = UIImage(named: "pepOne.png")
-            }
-            else if(indexPath == 2){
-                self?.imageView.image = UIImage(named: "pepTwo.png")
-            }
-            else if(indexPath == 3){
-                self?.imageView.image = UIImage(named: "locker.png")
-            }
-            else if(indexPath == 4){
-                self?.imageView.image = UIImage(named: "finalsOne.png")
-            }
-            else if(indexPath == 5){
-                self?.imageView.image = UIImage(named: "finalsTwo.png")
-            }
-            else if(indexPath == 6){
-                self?.imageView.image = UIImage(named: "finalsThree.png")
-            }
-            else if(indexPath == 7){
-                self?.imageView.image = UIImage(named: "knightsWay.png")
-            }
-            else if(indexPath == 8){
-                self?.imageView.image = UIImage(named: "early.png")
-            }
-            else if(indexPath == 9){
-                self?.imageView.image = UIImage(named: "special.png")
-            }
+            self?.imageView.image = UIImage(named: schedules[indexPath])
         }
     }
     
