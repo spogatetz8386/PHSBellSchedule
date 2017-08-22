@@ -27,21 +27,39 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
-        let items = ["Regular", "PEP1", "PEP2", "Locker Cleanup", "Finals Day 1", "Finals Day 2", "Finals Day 3", "Knights Way", "Early Dismissal", "Special Assembly"]
+        let items = ["Today", "Regular", "PEP1", "PEP2", "Locker Cleanup", "Finals Day 1", "Finals Day 2", "Finals Day 3", "Knights Way", "Early Dismissal", "Special Assembly"]
         let schedules = ["regular.png", "pepOne.png", "pepTwo.png", "locker.png", "finalsOne.png", "finalsTwo.png", "finalsThree.png", "knightsWay.png", "early.png", "special.png"]
         super.viewDidLoad()
         menu = BTNavigationDropdownMenu(navigationController: self.navigationController, containerView: self.navigationController!.view, title: "Schedule", items: items as [AnyObject])
-        menu.menuTitleColor = UIColor.blue
-        menu.backgroundColor = UIColor.gray
+        menu.menuTitleColor = UIColor.darkGray
+        menu.backgroundColor = UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0)
         self.navigationItem.titleView = menu
 
 
         // Do any additional setup after loading the view, typically from a nib.
+        self.navigationController?.navigationBar.backgroundColor = UIColor.black
         
+        self.setCurrentDate()
+
+        
+
+
+        
+        
+        menu.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
+            print("Did select item at index: \(indexPath)")
+            if(indexPath == 0){
+                self?.setCurrentDate()
+            }
+            else{
+                self?.imageView.image = UIImage(named: schedules[indexPath - 1])
+            }
+        }
+    }
+    
+    func setCurrentDate(){
         formatter.dateFormat = "MM/dd/yyyy"
         let currentDate = formatter.string(from: date)
-        print(currentDate)
-        
         self.imageView.image = UIImage(named: "regular")
         print("regular")
         
@@ -89,16 +107,6 @@ class ViewController: UIViewController {
         {
             self.imageView.image = UIImage(named: "finalsThree")
             print("final3")
-        }
-
-        
-
-
-        
-        
-        menu.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
-            print("Did select item at index: \(indexPath)")
-            self?.imageView.image = UIImage(named: schedules[indexPath])
         }
     }
     
