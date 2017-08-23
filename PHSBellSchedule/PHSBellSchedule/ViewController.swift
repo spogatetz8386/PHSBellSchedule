@@ -34,16 +34,14 @@ class ViewController: UIViewController {
         menu.menuTitleColor = UIColor.darkGray
         menu.backgroundColor = UIColor(colorLiteralRed: 1, green: 1, blue: 1, alpha: 0)
         self.navigationItem.titleView = menu
-
+        menu.cellTextLabelAlignment = .center
+        menu.cellSeparatorColor = UIColor.black
+        menu.cellBackgroundColor = UIColor(colorLiteralRed: 0/255, green: 114/255, blue: 255/255, alpha: 0.5)
 
         // Do any additional setup after loading the view, typically from a nib.
         self.navigationController?.navigationBar.backgroundColor = UIColor.black
         
         self.setCurrentDate()
-
-        
-
-
         
         
         menu.didSelectItemAtIndexHandler = {[weak self] (indexPath: Int) -> () in
