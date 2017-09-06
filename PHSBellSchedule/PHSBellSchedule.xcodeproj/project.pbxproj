@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		07E7D5EFF31E6FBDBACF9470 /* Pods_PHSBellSchedule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6A52B420BFC0B4FD0CAC24A /* Pods_PHSBellSchedule.framework */; };
+		2100444D1F5EEED8000E3B2F /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2100444C1F5EEED8000E3B2F /* NotificationCenter.framework */; };
+		210044501F5EEED8000E3B2F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2100444F1F5EEED8000E3B2F /* TodayViewController.swift */; };
+		210044531F5EEED8000E3B2F /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210044511F5EEED8000E3B2F /* MainInterface.storyboard */; };
+		210044571F5EEED8000E3B2F /* TimeLeftWidget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 2100444B1F5EEED8000E3B2F /* TimeLeftWidget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		21C857101F44926A00D8060F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C8570F1F44926A00D8060F /* AppDelegate.swift */; };
 		21C857121F44926A00D8060F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21C857111F44926A00D8060F /* ViewController.swift */; };
 		21C857151F44926A00D8060F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21C857131F44926A00D8060F /* Main.storyboard */; };
@@ -19,6 +23,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		210044551F5EEED8000E3B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21C857041F44926A00D8060F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2100444A1F5EEED8000E3B2F;
+			remoteInfo = TimeLeftWidget;
+		};
 		21C857241F44926B00D8060F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 21C857041F44926A00D8060F /* Project object */;
@@ -35,8 +46,28 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2100445B1F5EEED8000E3B2F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				210044571F5EEED8000E3B2F /* TimeLeftWidget.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		1E199D099BC436212382E4D4 /* Pods-PHSBellSchedule.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PHSBellSchedule.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PHSBellSchedule/Pods-PHSBellSchedule.debug.xcconfig"; sourceTree = "<group>"; };
+		2100444B1F5EEED8000E3B2F /* TimeLeftWidget.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = TimeLeftWidget.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		2100444C1F5EEED8000E3B2F /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		2100444F1F5EEED8000E3B2F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		210044521F5EEED8000E3B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		210044541F5EEED8000E3B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2100445C1F5EF2B6000E3B2F /* TimeLeftWidget.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = TimeLeftWidget.entitlements; sourceTree = "<group>"; };
 		21C8570C1F44926A00D8060F /* PHSBellSchedule.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PHSBellSchedule.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21C8570F1F44926A00D8060F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21C857111F44926A00D8060F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +87,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		210044481F5EEED8000E3B2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2100444D1F5EEED8000E3B2F /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C857091F44926A00D8060F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -81,12 +120,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2100444E1F5EEED8000E3B2F /* TimeLeftWidget */ = {
+			isa = PBXGroup;
+			children = (
+				2100445C1F5EF2B6000E3B2F /* TimeLeftWidget.entitlements */,
+				2100444F1F5EEED8000E3B2F /* TodayViewController.swift */,
+				210044511F5EEED8000E3B2F /* MainInterface.storyboard */,
+				210044541F5EEED8000E3B2F /* Info.plist */,
+			);
+			path = TimeLeftWidget;
+			sourceTree = "<group>";
+		};
 		21C857031F44926A00D8060F = {
 			isa = PBXGroup;
 			children = (
 				21C8570E1F44926A00D8060F /* PHSBellSchedule */,
 				21C857261F44926B00D8060F /* PHSBellScheduleTests */,
 				21C857311F44926B00D8060F /* PHSBellScheduleUITests */,
+				2100444E1F5EEED8000E3B2F /* TimeLeftWidget */,
 				21C8570D1F44926A00D8060F /* Products */,
 				F4508C061351D689AD2695F3 /* Pods */,
 				B872F3EFCCB0E61ADDF84491 /* Frameworks */,
@@ -99,6 +150,7 @@
 				21C8570C1F44926A00D8060F /* PHSBellSchedule.app */,
 				21C857231F44926B00D8060F /* PHSBellScheduleTests.xctest */,
 				21C8572E1F44926B00D8060F /* PHSBellScheduleUITests.xctest */,
+				2100444B1F5EEED8000E3B2F /* TimeLeftWidget.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -139,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				E6A52B420BFC0B4FD0CAC24A /* Pods_PHSBellSchedule.framework */,
+				2100444C1F5EEED8000E3B2F /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -155,6 +208,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		2100444A1F5EEED8000E3B2F /* TimeLeftWidget */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2100445A1F5EEED8000E3B2F /* Build configuration list for PBXNativeTarget "TimeLeftWidget" */;
+			buildPhases = (
+				210044471F5EEED8000E3B2F /* Sources */,
+				210044481F5EEED8000E3B2F /* Frameworks */,
+				210044491F5EEED8000E3B2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TimeLeftWidget;
+			productName = TimeLeftWidget;
+			productReference = 2100444B1F5EEED8000E3B2F /* TimeLeftWidget.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		21C8570B1F44926A00D8060F /* PHSBellSchedule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21C857371F44926B00D8060F /* Build configuration list for PBXNativeTarget "PHSBellSchedule" */;
@@ -165,10 +235,12 @@
 				21C8570A1F44926A00D8060F /* Resources */,
 				DDBF6E21B326D084ED60F6BC /* [CP] Embed Pods Frameworks */,
 				FD01DC2D29E8FD4D0FC51E24 /* [CP] Copy Pods Resources */,
+				2100445B1F5EEED8000E3B2F /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				210044561F5EEED8000E3B2F /* PBXTargetDependency */,
 			);
 			name = PHSBellSchedule;
 			productName = PHSBellSchedule;
@@ -221,6 +293,16 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = apcs2;
 				TargetAttributes = {
+					2100444A1F5EEED8000E3B2F = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = DC4RSCG25N;
+						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
 					21C8570B1F44926A00D8060F = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = DC4RSCG25N;
@@ -254,11 +336,20 @@
 				21C8570B1F44926A00D8060F /* PHSBellSchedule */,
 				21C857221F44926B00D8060F /* PHSBellScheduleTests */,
 				21C8572D1F44926B00D8060F /* PHSBellScheduleUITests */,
+				2100444A1F5EEED8000E3B2F /* TimeLeftWidget */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		210044491F5EEED8000E3B2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210044531F5EEED8000E3B2F /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C8570A1F44926A00D8060F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -340,6 +431,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		210044471F5EEED8000E3B2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				210044501F5EEED8000E3B2F /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		21C857081F44926A00D8060F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -369,6 +468,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		210044561F5EEED8000E3B2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2100444A1F5EEED8000E3B2F /* TimeLeftWidget */;
+			targetProxy = 210044551F5EEED8000E3B2F /* PBXContainerItemProxy */;
+		};
 		21C857251F44926B00D8060F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 21C8570B1F44926A00D8060F /* PHSBellSchedule */;
@@ -382,6 +486,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		210044511F5EEED8000E3B2F /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				210044521F5EEED8000E3B2F /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		21C857131F44926A00D8060F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,6 +513,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		210044581F5EEED8000E3B2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TimeLeftWidget/TimeLeftWidget.entitlements;
+				DEVELOPMENT_TEAM = DC4RSCG25N;
+				INFOPLIST_FILE = TimeLeftWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-61.PHSBellSchedule.TimeLeftWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		210044591F5EEED8000E3B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = TimeLeftWidget/TimeLeftWidget.entitlements;
+				DEVELOPMENT_TEAM = DC4RSCG25N;
+				INFOPLIST_FILE = TimeLeftWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "-61.PHSBellSchedule.TimeLeftWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		21C857351F44926B00D8060F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -500,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1E199D099BC436212382E4D4 /* Pods-PHSBellSchedule.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DC4RSCG25N;
 				INFOPLIST_FILE = PHSBellSchedule/Info.plist;
@@ -515,6 +656,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A20BC6433437CB578600E199 /* Pods-PHSBellSchedule.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = DC4RSCG25N;
 				INFOPLIST_FILE = PHSBellSchedule/Info.plist;
@@ -583,6 +725,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2100445A1F5EEED8000E3B2F /* Build configuration list for PBXNativeTarget "TimeLeftWidget" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				210044581F5EEED8000E3B2F /* Debug */,
+				210044591F5EEED8000E3B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		21C857071F44926A00D8060F /* Build configuration list for PBXProject "PHSBellSchedule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
